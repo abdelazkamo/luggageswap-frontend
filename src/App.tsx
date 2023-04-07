@@ -1,16 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from './store/actions';
+import './App.css';
+import RegisterForm from './component/register';
 
 function App() {
-  const counter = useSelector((state: any) => state.app.counter);
-  const dispatch = useDispatch();
-
   return (
-    <div>
-      <h1>Counter: {counter}</h1>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
+    <div className="App">
+      <RegisterForm/>
     </div>
   );
 }
