@@ -1,9 +1,9 @@
 // src/store/user/actions.ts
-import axios from 'axios';
 import { UserActionTypes, UserAction } from './types';
 import { ThunkAction } from 'redux-thunk';
 import { Action } from 'redux';
 import { RootState } from '../index';
+import api from '../../api';
 
 export const updateName = (name: string): UserAction => ({
   type: UserActionTypes.UPDATE_NAME,
@@ -37,7 +37,7 @@ export const registerFailure = (error: string): UserAction => ({
 
 export const registerUser = (name: string, email: string, password: string, contact: string): ThunkAction<void, RootState, unknown, Action<string>> => {
   return (dispatch) => {
-    axios.post('/api/register', {
+    api.post('/luggageswap/register', {
       name,
       email,
       password,
