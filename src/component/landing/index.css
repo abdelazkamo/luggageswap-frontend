@@ -2,7 +2,8 @@
   text-align: left;
 }
 .job-grid {
-  margin: 2rem;
+  margin: 0;
+  padding-left: 5rem;
 }
 .search-form {
   margin-bottom: 2rem;
@@ -21,9 +22,6 @@
 }
 .search-button {
   width: 40%;
-}
-.new-button {
-  width: 60%;
 }
 
 .allGroups {

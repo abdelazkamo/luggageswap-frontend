@@ -3,7 +3,6 @@ import {
   MDBContainer,
   MDBRow,
   MDBCol,
-  MDBInput,
   MDBCard,
   MDBCardBody,
   MDBBtn,
@@ -13,7 +12,6 @@ import FlightCard from "../flightCard";
 
 const Landing = () => {
   const [locationQuery, setLocationQuery] = useState("");
-  const [titleQuery, setTitleQuery] = useState("");
 
   const handelClick = () => {};
 
@@ -61,35 +59,39 @@ const Landing = () => {
       </MDBCard>
       <MDBRow className="job-card-row">
         <FlightCard
-          flightNumber="B1234"
-          origin=" Company"
-          destination="Location"
+          userName="Hicham Kamo"
+          origin=" New York"
+          destination="Los Angeles"
           depatureTime="12H"
           arivalTime="24H"
+          availableSpace="24 KG"
           onClick={handelClick}
         />
         <FlightCard
-          flightNumber="B1234"
+          userName="Abdel Aziz"
           origin=" Company"
           destination="Location"
           depatureTime="12H"
-          arivalTime="24H"
+          arivalTime="15H"
+          availableSpace="45 KG"
           onClick={handelClick}
         />
         <FlightCard
-          flightNumber="B1234"
+          userName="Bilkiss Biedi"
           origin=" Company"
           destination="Location"
           depatureTime="12H"
           arivalTime="24H"
+          availableSpace="24 KG"
           onClick={handelClick}
         />
         <FlightCard
-          flightNumber="B1234"
+          userName="B1234"
           origin=" Company"
           destination="Location"
           depatureTime="12H"
           arivalTime="24H"
+          availableSpace="24 KG"
           onClick={handelClick}
         />
       </MDBRow>
