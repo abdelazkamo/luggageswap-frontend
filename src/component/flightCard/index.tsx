@@ -10,6 +10,7 @@ interface JobCardProps {
   depatureTime: string;
   arivalTime: string;
   availableSpace: string;
+  price: string;
   onClick: () => void;
 }
 
@@ -23,27 +24,26 @@ function flightCard(props: JobCardProps) {
               <div className="job-card-header">
                 <Card.Title>{props.userName}</Card.Title>
               </div>
-              <div>
-                <Row>
-                  <Col md={6}>
+              <div className="item">
+                <div className="item">
+                  <div>
                     <Card.Text className="sub">{props.origin}</Card.Text>
                     <Card.Text className="sub">{props.destination}</Card.Text>
-                  </Col>
-                  <Col md={3}>
+                  </div>
+                  <div>
                     <Card.Text className="sub">{props.depatureTime}</Card.Text>
                     <Card.Text className="sub">{props.arivalTime}</Card.Text>
-                  </Col>
-                  <Col md={3}>
+                  </div>
+                  <div>
                     <Card.Text className="planeicon">
                       {props.availableSpace}
                     </Card.Text>
-                  </Col>
-                </Row>
-              </div>
-            </Col>
-            <Col>
-              <div className="planeicon">
-                <i className="fas fa-plane fa-4x text-info"></i>
+                  </div>
+                </div>
+                <div className="planeicon">
+                  <i className="fas fa-plane fa-4x text-info"></i>
+                  <div>{props.price} per KG</div>
+                </div>
               </div>
             </Col>
           </Row>

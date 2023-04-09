@@ -62,36 +62,40 @@ const Landing = () => {
           userName="Hicham Kamo"
           origin=" New York"
           destination="Los Angeles"
-          depatureTime="12H"
-          arivalTime="24H"
+          depatureTime="Mar 03, 12H"
+          arivalTime="Mar 03, 12H"
           availableSpace="24 KG"
+          price="$7"
           onClick={handelClick}
         />
         <FlightCard
           userName="Abdel Aziz"
           origin=" Company"
           destination="Location"
-          depatureTime="12H"
-          arivalTime="15H"
+          depatureTime="Mar 03, 12H"
+          arivalTime="Mar 03, 12H"
           availableSpace="45 KG"
+          price="$10"
           onClick={handelClick}
         />
         <FlightCard
           userName="Bilkiss Biedi"
           origin=" Company"
           destination="Location"
-          depatureTime="12H"
-          arivalTime="24H"
+          depatureTime="Mar 03, 12H"
+          arivalTime="Mar 03, 12H"
           availableSpace="24 KG"
+          price="$12"
           onClick={handelClick}
         />
         <FlightCard
           userName="B1234"
           origin=" Company"
           destination="Location"
-          depatureTime="12H"
-          arivalTime="24H"
+          depatureTime="Mar 03, 12H"
+          arivalTime="Mar 03, 12H"
           availableSpace="24 KG"
+          price="$8"
           onClick={handelClick}
         />
       </MDBRow>
