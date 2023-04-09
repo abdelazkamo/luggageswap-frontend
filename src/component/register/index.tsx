@@ -173,8 +173,8 @@ const RegisterForm = () => {
               <MDBIcon fab icon="github" size="sm" />
             </MDBBtn>
           </div>
-          <div>
-            Already have an account? <a href="http://">Login</a>
+          <div className="text-center">
+            Already have an account? <a href="/">Login</a>
           </div>
           <br />
         </MDBCard>

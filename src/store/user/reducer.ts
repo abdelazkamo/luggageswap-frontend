@@ -1,13 +1,14 @@
 // src/store/user/reducer.ts
 
-import { UserState, UserAction, UserActionTypes } from './types';
+import { UserState, UserAction, UserActionTypes } from "./types";
 
 const initialState: UserState = {
-  name: '',
-  email: '',
-  password: '',
-  contact: '',
+  name: "",
+  email: "",
+  password: "",
+  contact: "",
   error: null,
+  userId: null,
 };
 
 const userReducer = (state = initialState, action: UserAction): UserState => {
@@ -42,6 +43,18 @@ const userReducer = (state = initialState, action: UserAction): UserState => {
         ...state,
         error: action.payload,
       };
+    case UserActionTypes.LOGIN_SUCCESS:
+      return {
+        ...state,
+        error: null,
+        userId: action.payload,
+      };
+    case UserActionTypes.LOGIN_FAILURE:
+      return {
+        ...state,
+        error: action.payload,
+      };
+
     default:
       return state;
   }

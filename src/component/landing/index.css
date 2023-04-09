@@ -1,0 +1,70 @@
+.description {
+  text-align: left;
+}
+.job-grid {
+  margin: 2rem;
+}
+.search-form {
+  margin-bottom: 2rem;
+}
+.job-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.btn-col {
+  display: flex;
+  flex-basis: 100px;
+  width: 100%;
+  gap: 2rem;
+}
+.search-button {
+  width: 40%;
+}
+.new-button {
+  width: 60%;
+}
+
+.allGroups {
+  display: flex;
+  gap: 2rem;
+  flex-flow: row wrap;
+}
+
+.firstGroup {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.secondGroup {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.mySelectBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 75%;
+}
+
+.btn {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* Style for the Form.Select component */
+select.form-select {
+  height: 3rem;
+}
