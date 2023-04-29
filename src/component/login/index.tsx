@@ -16,16 +16,24 @@ import {
   MDBCheckbox,
 } from "mdb-react-ui-kit";
 import "./index.css";
+import logo from "../../assets/logo.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState("");
 
   const dispatch = useDispatch<ThunkDispatch<RootState, unknown, AnyAction>>();
   const error = useSelector((state: RootState) => state.user.error);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (error) {
+      setErrors(error);
+      setTimeout(() => {
+        setErrors("");
+      }, 1000);
+    }
     dispatch(loginUser(email, password));
   };
 
@@ -45,8 +53,10 @@ const Login = () => {
           >
             <MDBCardBody className="p-5 w-100 d-flex flex-column">
               <form className="px-5" onSubmit={handleSubmit} noValidate>
-                {error && <div className="error">{error}</div>}
-                <h3 className="fw-bold mb-2 text-center">Login</h3>
+                {error && <div className="error">{errors}</div>}
+                <h3 className="fw-bold mb-2 text-center">
+                  <img src={logo} height="50" alt="" loading="lazy" />
+                </h3>
                 <p className="text-white-50 mb-3">
                   Please enter your login and password!
                 </p>
@@ -77,7 +87,7 @@ const Login = () => {
                   label="Remember password"
                 />
                 <MDBBtn
-                  className="mb-4 w-100 gradient-custom-4"
+                  className="mb-4 w-100 gradient-custom-4 justify-content-center"
                   size="lg"
                   type="submit"
                 >

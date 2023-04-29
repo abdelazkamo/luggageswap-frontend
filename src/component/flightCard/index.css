@@ -1,16 +1,20 @@
 .job-card-row {
   margin: 0;
 }
+
 .planeicon {
   display: flex;
   flex-flow: column;
-  float: right;
   gap: 0.5rem;
 }
+
 .item {
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
+  align-items: center;
 }
+
 .sub {
   font-size: 1rem;
 }

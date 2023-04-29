@@ -39,3 +39,7 @@
 .error {
   color: red;
 }
+.contact {
+  display: flex;
+  gap: 1rem;
+}

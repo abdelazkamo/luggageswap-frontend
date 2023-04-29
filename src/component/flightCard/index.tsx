@@ -16,7 +16,7 @@ interface JobCardProps {
 
 function flightCard(props: JobCardProps) {
   return (
-    <Col sm={12} md={6} lg={6} xl={6}>
+    <Col xs={12} sm={6} md={6} lg={6} xl={6}>
       <Card className="job-card">
         <Card.Body>
           <Row>
@@ -36,7 +36,7 @@ function flightCard(props: JobCardProps) {
                   </div>
                   <div>
                     <Card.Text className="planeicon">
-                      {props.availableSpace}
+                      Space: {props.availableSpace}
                     </Card.Text>
                   </div>
                 </div>
