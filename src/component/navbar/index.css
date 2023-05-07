@@ -4,5 +4,51 @@
 }
 
 .bg {
-  background-color: rgb(235, 241, 245);
+  background-color: #ffff;
+}
+
+/* index.css */
+.logo {
+  display: flex;
+  align-items: center;
+}
+.log {
+  margin-left: 3rem;
+  padding: 0.5rem;
+}
+.log2 {
+  margin-right: 3rem;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo img {
+    width: 80%;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .nav-item {
+    margin: 0;
+  }
+
+  .nav-link {
+    padding: 10px;
+    text-align: center;
+  }
 }

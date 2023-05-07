@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,6 +9,7 @@ import RegisterForm from "./component/register";
 import Login from "./component/login";
 import Navbar from "./component/navbar";
 import Landing from "./component/landing";
+import Home from "./component/home";
 
 const App = () => {
   const ShowNavbar = () => {
@@ -30,6 +30,7 @@ const App = () => {
           <Route path="/" element={<Login />}></Route>
           <Route path="/register" element={<RegisterForm />}></Route>
           <Route path="/landing" element={<Landing />}></Route>
+          <Route path="/home" element={<Home />}></Route>
         </Routes>
       </Router>
     </div>

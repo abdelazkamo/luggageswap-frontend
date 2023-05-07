@@ -17,6 +17,7 @@ import {
 } from "mdb-react-ui-kit";
 import "./index.css";
 import logo from "../../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,15 +27,27 @@ const Login = () => {
   const dispatch = useDispatch<ThunkDispatch<RootState, unknown, AnyAction>>();
   const error = useSelector((state: RootState) => state.user.error);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (error) {
-      setErrors(error);
-      setTimeout(() => {
-        setErrors("");
-      }, 1000);
+
+    try {
+      if (error) {
+        setErrors(error);
+        setTimeout(() => {
+          setErrors("");
+        }, 1000);
+      }
+
+      await dispatch(loginUser(email, password));
+
+      if (!error) {
+        navigate("/home");
+      }
+    } catch (error) {
+      console.log(error);
     }
-    dispatch(loginUser(email, password));
   };
 
   return (

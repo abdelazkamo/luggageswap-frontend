@@ -17,7 +17,7 @@ const Landing = () => {
   const handelClick = () => {};
 
   return (
-    <div className="wrapper">
+    <div className="wrapper" style={{ height: "100vh", marginTop: "10rem" }}>
       <MDBContainer className="job-grid">
         <MDBCard
           className="bg-white my-5 mx-auto"

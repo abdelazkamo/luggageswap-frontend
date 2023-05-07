@@ -12,31 +12,43 @@ import logo from "../../assets/logo.png";
 const Navbar = () => {
   return (
     <>
-      <MDBNavbar expand="lg" className="bg">
-        <MDBContainer fluid>
-          <div className="d-flex">
+      <MDBNavbar
+        expand="lg"
+        className="bg"
+        style={{ position: "fixed", top: "0", width: "100%", zIndex: "1" }}
+      >
+        <MDBContainer fluid className="logo">
+          <div className="d-flex log">
             <MDBNavbarBrand href="#">
               <img src={logo} height="50" alt="" loading="lazy" />
             </MDBNavbarBrand>
           </div>
           <div>
-            <MDBNavbarNav>
+            <MDBNavbarNav className="log2">
               <div className="d-flex">
                 <MDBNavbarItem>
-                  <MDBNavbarLink active aria-current="page" href="#">
-                    <div className="menuitem">Home</div>
+                  <MDBNavbarLink
+                    active
+                    aria-current="page"
+                    href="#"
+                    style={{ fontSize: "20px" }}
+                  >
+                    <i className="fas fa-search"></i> Search{" "}
+                  </MDBNavbarLink>
+                </MDBNavbarItem>
+
+                <MDBNavbarItem>
+                  <MDBNavbarLink href="#" style={{ fontSize: "20px" }}>
+                    <i className="fas fa-plus"></i> Publish a ride{" "}
                   </MDBNavbarLink>
                 </MDBNavbarItem>
 
                 <MDBNavbarItem>
                   <MDBNavbarLink href="#">
-                    <div className="menuitem">Features</div>
-                  </MDBNavbarLink>
-                </MDBNavbarItem>
-
-                <MDBNavbarItem>
-                  <MDBNavbarLink href="#">
-                    <div className="menuitem">Pricing</div>
+                    <i
+                      className="fas fa-user-circle"
+                      style={{ fontSize: "35px" }}
+                    ></i>
                   </MDBNavbarLink>
                 </MDBNavbarItem>
               </div>
