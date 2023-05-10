@@ -1,0 +1,134 @@
+.hero{
+    min-height: 70vh;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 2rem;
+}
+.hero-box{
+    margin-bottom: 1rem;
+}
+.bonus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    padding: 2rem 5rem 2rem ;
+    
+}
+.bonus-img{
+    width: 70vw;
+    height: 30vw;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;}
+.bonus-img img{
+    width: 95%;
+    height: 99%;
+    border-radius: 20px;
+    position: relative;
+}
+.bonus-content{
+    margin-left: 5%;
+}
+.bonus-content h3 {
+    font-size: 2.2rem;
+}
+.bonus-content p {
+    font-size: 1.3rem;
+    margin: 2rem 0 3rem;
+}
+
+.quality h2{
+    margin-bottom: 5rem;
+}
+.quality-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.quality-content .quality-box{
+    flex: 1 1 10rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+.quality-box h3{
+    font-size: 1.5rem;
+}
+.quality-box p{
+    font-size: 1.1rem;
+    margin: 1rem 0 3rem;
+}
+
+.travel{
+    background-color: rgb(5, 71, 82);
+    padding: .2rem 1rem .2rem 1rem;
+
+    color: white;
+}
+.travel-content{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.travel-box{
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    min-height: 4.75em;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(5, 71, 82);
+    font-size: 18px;
+    justify-content: center;
+    margin: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+    .bonus{
+        flex-direction: column-reverse;
+    }
+
+    .bonus-img{
+        text-align: center;
+        width: 40vw;
+        height: 35vw;
+    
+        margin-top: 4rem;
+
+    }
+    .travel-content{
+        flex-direction: column;
+    }
+    .travel-box{
+        width: 100%;
+        margin: 0 .5rem .2rem .5rem;
+
+    }
+    
+}
+@media (max-width: 365px){
+    .bonus-img{
+        width: 90vw;
+    }
+}
