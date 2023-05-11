@@ -1,0 +1,23 @@
+.hero{
+    min-height: 30vh;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 2rem;
+}
+.hero-box{
+    margin-bottom: 1rem;
+}
+
+.search-content{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    min-height: 100%;
+    background: hsla(200, 20%, 97%, 1);
+}
+.aside-search{
+    max-width: 40%;
+    min-height: 100%;
+}

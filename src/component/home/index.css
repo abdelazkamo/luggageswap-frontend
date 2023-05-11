@@ -9,6 +9,26 @@
 .hero-box{
     margin-bottom: 1rem;
 }
+
+.travel-form{
+flex-grow: 1;
+
+}
+.leaving-form{
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    outline: none;
+
+}
+.calandar-form{
+    box-sizing: border-box;
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    outline: none;
+
+}
 .bonus{
     display: flex;
     justify-content: center;
@@ -21,7 +41,7 @@
 .bonus-img{
     width: 70vw;
     height: 30vw;
-    background: #07182E;
+    background: transparent;
     position: relative;
     display: flex;
     place-content: center;

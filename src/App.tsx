@@ -10,6 +10,7 @@ import Login from "./component/login";
 import Navbar from "./component/navbar";
 import Landing from "./component/landing";
 import Home from "./component/home";
+import Search from "./component/search";
 
 const App = () => {
   const ShowNavbar = () => {
@@ -30,6 +31,8 @@ const App = () => {
           <Route path="/" element={<Login />}></Route>
           <Route path="/register" element={<RegisterForm />}></Route>
           <Route path="/landing" element={<Landing />}></Route>
+          <Route path="/search" element={<Search />}></Route>
+
           <Route path="/home" element={<Home />}></Route>
         </Routes>
       </Router>

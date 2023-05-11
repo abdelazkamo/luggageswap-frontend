@@ -2,9 +2,13 @@ import React from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
 //import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { FaAddressBook, FaCalendarAlt } from "react-icons/fa";
+import { FaAddressBook } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
+import hero from "../../assets/hero1.png";
+import img1 from "../../assets/img1.png";
+import img4 from "../../assets/img4.png";
+import img2 from "../../assets/img2.png";
 
 interface FormData {
   from: string;
@@ -43,10 +47,9 @@ const Home = () => {
     <>
       <div
         id="hero"
-        className="hero"
+        className="hero img-fluid"
         style={{
-          backgroundImage:
-            "url(https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp)",
+          backgroundImage: `url(${hero})`,
         }}
       >
         <div
@@ -70,12 +73,7 @@ const Home = () => {
                     name="from"
                     value={formData.from}
                     onChange={handleInputChange}
-                    style={{
-                      background: "transparent",
-                      border: "none",
-                      boxShadow: "none",
-                      outline: "none",
-                    }}
+                    className="leaving-form"
                   />
                 </Form.Group>
               </Col>
@@ -87,31 +85,36 @@ const Home = () => {
                     name="to"
                     value={formData.to}
                     onChange={handleInputChange}
-                    style={{
-                      background: "transparent",
-                      border: "none",
-                      boxShadow: "none",
-                      outline: "none",
-                    }}
+                    className="leaving-form"
                   />
                 </Form.Group>
               </Col>
               <Col style={{ borderRight: "1px solid #ccc" }}>
-                <Row style={{ display: "flex", alignItems: "center" }}>
+                <Form.Group>
+                  <Form.Control
+                    type="date"
+                    placeholder="date"
+                    name="from"
+                    value=""
+                    className="leaving-form"
+                  />
+                </Form.Group>
+
+                {/* <Row className="calandar-form">
                   <div>
                     <FaCalendarAlt size={24} style={{ color: "#666" }} /> Today
                   </div>
                   <div>
-                    {/* <Form.Group>
+                    <Form.Group>
       <DatePicker
         selected={formData.date}
         onChange={handleDateChange}
         dateFormat="yyyy/MM/dd"
         minDate={new Date()}
       />
-    </Form.Group> */}
+    </Form.Group> 
                   </div>
-                </Row>
+                </Row> */}
               </Col>
 
               <Col>
@@ -120,6 +123,7 @@ const Home = () => {
                     <Button
                       variant="outline-secondary"
                       size="sm"
+                      className=" bg-white text-black"
                       onClick={() =>
                         handlePassengerChange(
                           Math.max(formData.passengers - 1, 1)
@@ -128,10 +132,13 @@ const Home = () => {
                     >
                       -
                     </Button>
-                    <span className="mx-2">{formData.passengers}</span>
+                    <span className="mx-2 text-black">
+                      {formData.passengers}
+                    </span>
                     <Button
                       variant="outline-secondary"
                       size="sm"
+                      className=" bg-white text-black"
                       onClick={() =>
                         handlePassengerChange(formData.passengers + 1)
                       }
@@ -158,7 +165,7 @@ const Home = () => {
       </div>
       <section className="bonus" id="bonus">
         <div className="bonus-img">
-          <img src="" alt="" />
+          <img src={img1} alt="" />
         </div>
         <div className="bonus-content">
           <h3>Recevez jusqu'à 100 € de Bonus Covoiturage !</h3>
@@ -187,7 +194,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="bonus-img">
-          <img src="" alt="" />
+          <img src={img2} alt="" />
         </div>
       </section>
       <section id="quality" className="quality">
@@ -235,7 +242,7 @@ const Home = () => {
       </div>
       <section className="bonus" id="bonus">
         <div className="bonus-img">
-          <img src="" alt="" />
+          <img src={img4} alt="" />
         </div>
         <div className="bonus-content">
           <h3>
