@@ -1,8 +1,14 @@
 import React from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
-import { FaClock, FaHourglass, FaMoneyBillWave, FaUser } from "react-icons/fa";
+import {
+  FaClock,
+  FaDollarSign,
+  FaHourglass,
+  FaMoneyBillWave,
+  FaUser,
+} from "react-icons/fa";
 
 interface FormData {
   from: string;
@@ -229,6 +235,76 @@ function Search() {
             </div>
           </div>
         </aside>
+        <div className="row container d-flex flex-column">
+          <div className="row justify-content-start mb-3">
+            <div className="card myH w-75 my-3">
+              <div className="card-body d-flex justify-content-center">
+                <ul className="nav nav-tabs card-header-tabs">
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link active"
+                      aria-current="true"
+                      to={"#"}
+                    >
+                      Tout
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to={"#"}>
+                      Avion
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to={"#"}>
+                      Autres
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="row justify-content-start">
+            <h3>Aujourd'hui</h3>
+            <p>Paris - Londres</p>
+            <p>87 trajets disponibles</p>
+          </div>
+          <div className="row justify-content-start my-2">
+            <div className="card w-75">
+              <div className="card-body">
+                <div className=" d-flex justify-content-between mb-3">
+                  <div className="col-auto">12:01 - 18:00</div>
+                  <div className="col-4 text-end">
+                    200 <FaDollarSign size={18} style={{ color: "#666" }} />
+                  </div>
+                </div>
+                <div className=" d-flex justify-content-between my-2 mt-3">
+                  <div className="col-auto">12:01 - 18:00</div>
+                  <div className="col-4 text-end">
+                    200 <FaDollarSign size={18} style={{ color: "#666" }} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row justify-content-start my-2">
+            <div className="card w-75">
+              <div className="card-body">
+                <div className=" d-flex justify-content-between mb-3">
+                  <div className="col-auto">12:01 - 18:00</div>
+                  <div className="col-4 text-end">
+                    200 <FaDollarSign size={18} style={{ color: "#666" }} />
+                  </div>
+                </div>
+                <div className=" d-flex justify-content-between my-2 mt-3">
+                  <div className="col-auto">12:01 - 18:00</div>
+                  <div className="col-4 text-end">
+                    200 <FaDollarSign size={18} style={{ color: "#666" }} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

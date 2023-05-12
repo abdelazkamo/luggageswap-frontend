@@ -16,8 +16,13 @@
     z-index: 1;
     min-height: 100%;
     background: hsla(200, 20%, 97%, 1);
+    display: flex;
 }
 .aside-search{
     max-width: 40%;
     min-height: 100%;
 }
+.myH {
+    height: 104px;
+    border-radius: 30px;
+  }
