@@ -9,6 +9,13 @@
 .hero-box{
     margin-bottom: 1rem;
 }
+.leaving-form{
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    outline: none;
+
+}
 
 .search-content{
     position: absolute;

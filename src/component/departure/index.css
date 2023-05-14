@@ -1,0 +1,22 @@
+.hero{
+    min-height: 30vh;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 2rem;
+}
+.hero-box{
+    margin-bottom: 1rem;
+}
+.leaving-formD{
+    background: #dddddd;
+    border: 3px solid;
+    border-color:darkcyan;
+    box-shadow: none;
+    outline: none;
+    min-height: 4rem;
+    color: black;
+    font-weight: 600;
+    border-radius: 10px;
+}

@@ -1,0 +1,11 @@
+.hero{
+    min-height: 30vh;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 2rem;
+}
+.hero-box{
+    margin-bottom: 1rem;
+}

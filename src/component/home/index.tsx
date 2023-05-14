@@ -47,7 +47,7 @@ const Home = () => {
     <>
       <div
         id="hero"
-        className="hero img-fluid"
+        className="heroH img-fluid"
         style={{
           backgroundImage: `url(${hero})`,
         }}
