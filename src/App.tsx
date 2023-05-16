@@ -14,6 +14,7 @@ import Search from "./component/search";
 import Offer from "./component/offer-seats";
 import Departure from "./component/departure";
 import Arrival from "./component/arrival";
+import Message from "./component/message";
 
 const App = () => {
   const ShowNavbar = () => {
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/offer-seats" element={<Offer />}></Route>
           <Route path="/offer-seats/departure" element={<Departure />}></Route>
           <Route path="/offer-seats/arrival" element={<Arrival />}></Route>
+          <Route path="/message" element={<Message />}></Route>
 
           <Route path="/home" element={<Home />}></Route>
         </Routes>
