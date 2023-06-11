@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import "./index.css";
+import "./search.css";
 import {
   FaClock,
   FaDollarSign,
@@ -155,8 +155,9 @@ function Search() {
             </div>
             <div className="row justify-content-between my-3">
               <div className="col-auto">
-                <FaClock size={24} style={{ color: "#666" }} /> depart le plus
-                tot
+                <FaClock size={24} style={{ color: "#666" }} />
+                <span>depart le plus tot</span> 
+                
               </div>
               <div className="col-4 text-center">
                 <Form.Check inline name="group1" />
