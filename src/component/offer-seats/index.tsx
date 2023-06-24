@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import "./index.css";
+import hero from "../../assets/hero3.jpg";
 
 function Offer() {
   return (
     <>
-      <div id="hero" className="hero img-fluid">
+      <div id="hero" className="hero img-fluid"
+              style={{
+                backgroundImage: `url(${hero})`,
+              }}>
         <div
           className="hero-box"
           // style={{
@@ -21,20 +25,20 @@ function Offer() {
       </div>
 
       <div className=" d-flex justify-content-center">
-        <div className="col-8 ">
+        <div className="col-8 mx3 my-5 ">
           <h1>Recevez jusqu’à 100 € de Bonus Covoiturage</h1>
           <h3>Voici la marche à suivre :</h3>
-          <div className="row justify-content-start">
+          <div className="row justify-content-start my-3">
             <h5>Publiez votre trajet</h5>
             <p>
               et indiquez les informations nécessaires pour recevoir vos bonus
             </p>
           </div>
-          <div className="row justify-content-start">
+          <div className="row justify-content-start my-3">
             <h5>Voyagez avec au moins un passagert</h5>
             <p>En France sur un trajet de plus 80 km</p>
           </div>
-          <div className="row justify-content-start">
+          <div className="row justify-content-start my-3">
             <h5>Recevez 25 € pour votre premier covoiturage</h5>
             <p>
               et 75 € pour votre troisième trajet, en partenariat avec

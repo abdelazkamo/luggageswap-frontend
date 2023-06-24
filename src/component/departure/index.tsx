@@ -1,7 +1,8 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import "./index.css";
+import "./departure.css";
 import { Link, useNavigate } from "react-router-dom";
+import hero from "../../assets/hero2.jpg";
 
 interface FormData {
   from: string;
@@ -22,7 +23,10 @@ function Departure() {
 
   return (
     <>
-      <div id="hero" className="hero img-fluid">
+      <div id="hero" className="hero img-fluid"
+                style={{
+                  backgroundImage: `url(${hero})`,
+                }}>
         <div
           className="hero-box"
           // style={{
@@ -33,143 +37,165 @@ function Departure() {
           //   display: "flex",
           //   flexDirection: "column",
           // }}
+
         >
           <h3>Publier un trajet</h3>
         </div>
       </div>
       { <Form onSubmit={handleSubmit} style={{ flexGrow: 1 }}>
-        <div className="row justify-content-md-center text-center">
-          <div className="row justify-content-md-center">
+        <div className="row justify-content-md-center text-center my-5"
+                        style={{
+                          backgroundColor: '#b6e9fb',
+                        }}>
+        <div className='signup-container'>
 
-          <div
-              className="col-md-4 col-xl-4 col-xxl-4 col-sm-6 my-2  my-2 text-start"
-              id="div-num_engin"
-            >
-              <label className="form-label fw-bolder" id="label_moto">
-              D’où partez-vous
-              </label>
+  <div className='right-container'>
+    <header>
 
-              <Form.Control
-                className="form-control rounded  "
-                type="text"
+      <div className='set my-4'>
+        <div className='pets-name'>
+        <Form.Group>
+            <Form.Control
+              type="text"
+              placeholder="D'ou partez vous"
+              name="to"
+              className="leaving-formA"
+            />
+          </Form.Group>
+        </div>
+        <div className='pets-name'>
+          <Form.Group>
+            <Form.Control
+              type="text"
+              placeholder="Ou allez vous"
+              name="to"
+              className="leaving-formA"
+            />
+          </Form.Group>
+        </div>
+        <div className='pets-photo'>
+        <Form.Group>
+            <Form.Control
+              type="date"
+              placeholder="Quand partez vous"
+              name="to"
+              className="leaving-formA"
+            />
+          </Form.Group>
+        </div>
+      </div>
+      <div className='set my-4'>
+        <div className='pets-gender'>
+        <label htmlFor=''>Genre</label>
+
+          <div className='radio-container '>
+          <Form.Control
+                className="form-control rounded "
+                type="radio"
                 name="depart"
+                id="pet-gender-female"
                 value=""
                 placeholder="Saisissez l'addresse precise "
               ></Form.Control>
-            </div>
-            </div>
-          <div className="row justify-content-md-center">
-
-            <div
-              className="col-md-4 col-xl-4 col-xxl-4 col-sm-6 my-2  my-2 text-start"
-              id="div-num_engin"
-            >
-              <label className="form-label fw-bolder" id="label_moto">
-              Où allez-vous?
-              </label>
-
-              <Form.Control
+            <label htmlFor='pet-gender-female'>Female</label>
+            <Form.Control
                 className="form-control rounded  "
-                type="text"
-                name="arrival"
+                type="radio"
+                name="depart"
+                id="pet-gender-male"
                 value=""
-                placeholder="Saisissez l'addresse precise  "
+                placeholder="Saisissez l'addresse precise "
               ></Form.Control>
-            </div>
+            <label htmlFor='pet-gender-male'>Male</label>
           </div>
-          <div className="row justify-content-md-center text-start">
-            <div
-              className="col-md-4 col-xl-4 col-xxl-4 col-sm-6 my-2  my-2 text-start"
-              id="add-cls"
-            >
-              <label
-                id="add-label"
-                className="form-label fw-bolder text-uppercase"
-              >
-                Quand partez-vous ?
-              </label>
-              <Form.Control
+        </div>
+        <div className='pets-gender'>
+        <label htmlFor=''>Voulez vous prendres des cosmetics</label>
+
+          <div className='radio-container '>
+          <Form.Control
+                className="form-control rounded "
+                type="radio"
+                name="cosmetics"
+                id="cosmetics-yes"
+                value=""
+              ></Form.Control>
+            <label htmlFor='cosmetics-yes'>oui</label>
+            <Form.Control
                 className="form-control rounded  "
-                type="date"
-                name="date"
+                type="radio"
+                name="cosmetics"
+                id="cosmetics-no"
                 value=""
-                placeholder="Saisissez la date precise  "
               ></Form.Control>
-            </div>
-            </div>
-          <div className="row justify-content-md-center">
-
-            <div
-              className="col-md-4 col-xl-4 col-xxl-4 col-sm-6 my-2  my-2 text-start"
-              id="add-cls"
-            >
-              <label
-                id="add-label"
-                className="form-label fw-bolder text-uppercase"
-              >
-                À quelle heure souhaitez-vous retrouver vos passagers?
-              </label>
-              <Form.Control
-                className="form-control rounded"
-                type="time"
-                name="heure"
-                id="add-input"
-                value=""
-                placeholder="Saisissez votre Numéro "
-              ></Form.Control>
-            </div>
+            <label htmlFor='cosmetics-no'>non</label>
           </div>
-          <div className="row justify-content-md-center text-start">
-            <div
-              className="col-md-4 col-xl-4 col-xxl-4 col-sm-6 my-2  my-2 text-start"
-              id="add-cls"
-            >
-              <label
-                id="add-label"
-                className="form-label fw-bolder text-uppercase"
-              >
-                Combien de kilo pouvez vous prendre
-              </label>
-              <Form.Control
+        </div>
+        <div className='pets-spayed-neutered'>
+          <label htmlFor='pet-spayed'>Voulez vous prendres des electroniques</label>
+          <div className='radio-container'>
+          <Form.Control
                 className="form-control rounded  "
-                type="number"
-                name="kilo"
+                type="radio"
+                name="pet-neutered"
+                id="pet-spayed"
                 value=""
-                placeholder="Saisissez le poid exacte  "
+                placeholder="Saisissez l'addresse precise "
               ></Form.Control>
-            </div>
-            </div>
-          <div className="row justify-content-md-center">
-
-            <div
-              className="col-md-4 col-xl-4 col-xxl-4 col-sm-6 my-2  my-2 text-start"
-              id="add-cls"
-            >
-              <label
-                id="add-label"
-                className="form-label fw-bolder text-uppercase"
-              >Fixez votre prix par Kilo
-              </label>
-              <Form.Control
-                className="form-control rounded"
-                type="text"
-                name="heure"
-                id="add-input"
+            <label htmlFor='pet-spayed'>oui</label>
+            <Form.Control
+                className="form-control rounded  "
+                type="radio"
+                name="pet-neutered"
+                id="pet-neutered"
                 value=""
-                placeholder="Saisissez le montant "
+                placeholder="Saisissez l'addresse precise "
               ></Form.Control>
-            </div>
+            <label htmlFor='pet-neutered'>non</label>
           </div>
-          <div className=" row justify-content-center">
-            <Link
-              to={"/offer-seats/departure"}
-              className="btn btn-primary rounded-pill col-xl-4"
-            >
-              {" "}
-              Publier le trajet
-            </Link>
-          </div>
+        </div>
+      </div>
+      <div className='pets-weight my-4'>
+        <p>Estimations du poids que vous pouvez prendre</p>
+        <div className='radio-container'>
+        <Form.Control
+                className="form-control rounded  "
+                type="radio"
+                name="pet-weight"
+                id="pet-weight-0-25"
+                value="0-25"
+              ></Form.Control>
+          <label htmlFor='pet-weight-0-25'>0-25 lbs</label>
+          <Form.Control
+                className="form-control rounded  "
+                type="radio"
+                name="pet-weight"
+                id="pet-weight-25-50"
+                value="25-50"
+              ></Form.Control>
+          <label htmlFor='pet-weight-25-50'>25-50 lbs</label>
+          <Form.Control
+                className="form-control rounded  "
+                type="radio"
+                name="pet-weight"
+                id="pet-weight-50-100"
+                value="50-100"
+              ></Form.Control>
+          <label htmlFor='pet-weight-50-100'>50-100 lbs</label>
+          <Form.Control
+                className="form-control rounded  "
+                type="radio"
+                name="pet-weight"
+                id="pet-weight-100-plus"
+                value="100+"
+              ></Form.Control>
+          <label htmlFor='pet-weight-100-plus'>100+ lbs</label>
+        </div>
+      </div>
 
+    </header>
+  </div>
+</div>
         </div>
       </Form> }
 
