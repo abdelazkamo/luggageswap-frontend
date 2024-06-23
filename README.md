@@ -41,6 +41,10 @@ To get a local copy up and running, follow these simple steps:
    ```sh
    git clone https://github.com/aazizmegna/luggageswag-frontend.git
    ```
+2. **Intall dependencies**:
+   ```sh
+   npm install
+   ```
 
 ## Usage
 
@@ -58,8 +62,8 @@ azizoukamo@gmail.com
 
 ## Screenshots
 
-![alt text](image-4.png)
-![alt text](image-3.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image.png)
+![alt text](src/assets/image-4.png)
+![alt text](src/assets/image-3.png)
+![alt text](src/assets/image-1.png)
+![alt text](src/assets/image-2.png)
+![alt text](src/assets/image.png)
