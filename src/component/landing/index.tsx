@@ -140,6 +140,16 @@ const Landing = () => {
         </MDBCard>
         <MDBRow className="job-card-row" style={{ maxWidth: "100%" }}>
           <FlightCard
+            userName="Abdel Aziz"
+            origin=" Stuttgart"
+            destination="Berlin"
+            depatureTime="Mar 03, 12H"
+            arivalTime="Mar 03, 12H"
+            availableSpace="45 KG"
+            price="$10"
+            onClick={handelClick}
+          />
+          <FlightCard
             userName="Hicham Kamo"
             origin=" New York"
             destination="Los Angeles"
@@ -150,19 +160,9 @@ const Landing = () => {
             onClick={handelClick}
           />
           <FlightCard
-            userName="Abdel Aziz"
-            origin=" Company"
-            destination="Location"
-            depatureTime="Mar 03, 12H"
-            arivalTime="Mar 03, 12H"
-            availableSpace="45 KG"
-            price="$10"
-            onClick={handelClick}
-          />
-          <FlightCard
             userName="Bilkiss Biedi"
-            origin=" Company"
-            destination="Location"
+            origin=" Worms"
+            destination="Stuugart"
             depatureTime="Mar 03, 12H"
             arivalTime="Mar 03, 12H"
             availableSpace="24 KG"
@@ -170,9 +170,9 @@ const Landing = () => {
             onClick={handelClick}
           />
           <FlightCard
-            userName="B1234"
-            origin=" Company"
-            destination="Location"
+            userName="Abdel Aziz"
+            origin=" Munich"
+            destination="Worms"
             depatureTime="Mar 03, 12H"
             arivalTime="Mar 03, 12H"
             availableSpace="24 KG"
