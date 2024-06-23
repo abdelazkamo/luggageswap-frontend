@@ -1,6 +1,6 @@
 # Luggage Swap Website
 
-Welcome to the Luggage Swap website repository! This project is built using React typeScript. The purpose of this website is to provide a platform where users can swap or trade their luggage items with others.
+Welcome to Luggage Swap! This project is built using React and TypeScript. The purpose of this website is to provide a platform where users can ship their luggage via travelers who are heading in the same direction.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ Welcome to the Luggage Swap website repository! This project is built using Reac
 
 ## Introduction
 
-Luggage Swap is a web application designed to facilitate the exchange of luggage items among users. Whether you have a suitcase you no longer need or are looking for a specific type of luggage, this platform allows you to list your items and connect with others for potential swaps.
+Luggage Swap is a web application designed to facilitate the shipping of luggage between users. By using this platform, you can protect the environment by reducing the unnecessary transactions typically involved in the shipping process through traditional agencies. Instead, the platform allows you to find a traveler who can take your luggage with them, making the process more efficient and eco-friendly.
 
 ## Features
 
