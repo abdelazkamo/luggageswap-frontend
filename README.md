@@ -9,8 +9,8 @@ Welcome to Luggage Swap! This project is built using React and TypeScript. The p
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contact](#contact)
 - [Screenshots](#screenshots)
+- [Contact](#contact)
 
 ## Introduction
 
@@ -56,10 +56,6 @@ npm start
 
 2. **Open http://localhost:3000 to view it in your browser**.
 
-## Contact
-
-azizoukamo@gmail.com
-
 ## Screenshots
 
 ![alt text](src/assets/image-4.png)
@@ -67,3 +63,7 @@ azizoukamo@gmail.com
 ![alt text](src/assets/image-1.png)
 ![alt text](src/assets/image-2.png)
 ![alt text](src/assets/image.png)
+
+## Contact
+
+azizoukamo@gmail.com
