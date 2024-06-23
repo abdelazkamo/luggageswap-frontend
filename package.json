@@ -19,6 +19,7 @@
     "@types/react-redux": "^7.1.25",
     "axios": "^1.3.5",
     "bootstrap": "^5.2.3",
+    "craco": "^0.0.3",
     "mdb-cli": "^4.3.0",
     "mdb-react-ui-kit": "^6.0.0",
     "react": "^18.2.0",
